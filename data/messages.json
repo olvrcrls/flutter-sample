@@ -1,36 +1,36 @@
 [
     {
-      "title": "You won lottery",
+      "subject": "You won lottery",
       "body":
           "Aliqua ipsum consectetur consectetur duis proident incididunt reprehenderit et et est duis ut veniam nulla. Velit eu consectetur quis magna qui ex mollit laborum veniam enim exercitation consequat duis adipisicing."
     },
     {
-      "title": "Another Example",
+      "subject": "Another Example",
       "body":
           "Adipisicing commodo mollit labore pariatur cupidatat aliqua excepteur. Ut incididunt nisi aute officia voluptate incididunt cupidatat ex culpa aute qui."
     },
     {
-      "title": "Hello World, It\"s a message",
+      "subject": "Hello World, It\"s a message",
       "body": "Irure aliqua laboris nulla aute aliqua eu. Aliquip fugiat laborum culpa dolore ullamco sint dolore aliqua tempor ex non eu occaecat reprehenderit."
     },
     {
-      "title": "This is a message for you",
+      "subject": "This is a message for you",
       "body": "Elit sint ex do incididunt tempor excepteur. Proident ad nisi pariatur ipsum nostrud pariatur laboris aute occaecat qui qui aute."
     },
     {
-      "title": "This is a message for you",
+      "subject": "This is a message for you",
       "body": "Elit sint ex do incididunt tempor excepteur. Dolor aliqua esse ut minim labore."
     },
     {
-      "title": "This is a message for you",
+      "subject": "This is a message for you",
       "body": "Elit sint ex do incididunt tempor excepteur. Labore incididunt excepteur ipsum voluptate non nulla et officia eiusmod magna eiusmod."
     },
     {
-      "title": "This is a message for you",
+      "subject": "This is a message for you",
       "body": "Elit sint ex do incididunt tempor excepteur. In exercitation dolor veniam occaecat aliquip ea esse aute adipisicing."
     },
     {
-      "title": "Last Message",
+      "subject": "Last Message",
       "body": "Elit sint ex do incididunt tempor excepteur. In exercitation dolor veniam occaecat aliquip ea esse aute adipisicing."
     }
   ]
