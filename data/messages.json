@@ -29,4 +29,8 @@
       "title": "This is a message for you",
       "body": "Elit sint ex do incididunt tempor excepteur. In exercitation dolor veniam occaecat aliquip ea esse aute adipisicing."
     },
-  ];
+    {
+      "title": "Last Message",
+      "body": "Elit sint ex do incididunt tempor excepteur. In exercitation dolor veniam occaecat aliquip ea esse aute adipisicing."
+    }
+  ]
