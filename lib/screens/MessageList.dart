@@ -13,7 +13,7 @@ class MessageList extends StatefulWidget {
 }
 
 class _MessageListState extends State<MessageList> {
-  var messages = const []; 
+  List<Message> messages = const []; 
 
   Future loadMessageList() async {
     var apiUrl = "http://www.mocky.io/v2/5e3a8d522f00000b3c56c3d0";
