@@ -14,7 +14,7 @@ class Message {
   factory Message.fromJson(Map<String, dynamic> json) =>
       _$MessageFromJson(json);
 
-  static Future browse() async {
+  static Future<List<Message>> browse() async {
       var apiUrl = "http://www.mocky.io/v2/5e3a8d522f00000b3c56c3d0";
       http.Response response = await http.get(apiUrl);
       await Future.delayed(Duration(seconds: 2));
