@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:sample/models/Message.dart';
 
 class MessageList extends StatefulWidget {
@@ -13,15 +11,15 @@ class MessageList extends StatefulWidget {
 }
 
 class _MessageListState extends State<MessageList> {
-  List<Message> messages = const []; 
+  List<Message> messages = [];
+  bool isLoading = true;
 
   Future loadMessageList() async {
-    var apiUrl = "http://www.mocky.io/v2/5e3a8d522f00000b3c56c3d0";
-    http.Response response = await http.get(apiUrl);
-    String contents = response.body;
-    List collection = json.decode(contents);
-    List<Message> _messages = collection.map((json) => Message.fromJson(json)).toList();
-    setState(() => messages = _messages);
+    List<Message> _messages = await Message.browse();
+    setState(() {
+      messages = _messages;
+      isLoading = false;
+    });
   }
 
   @override
@@ -36,24 +34,27 @@ class _MessageListState extends State<MessageList> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: ListView.separated(
-          itemCount: messages.length,
-          separatorBuilder: (BuildContext context, int index) => Divider(),
-          itemBuilder: (BuildContext context, int index) {
-            Message message = messages[index];
-            return ListTile(
-              isThreeLine: true,
-              leading: CircleAvatar(
-                child: Text('O'),
-              ),
-              title: Text(message.subject),
-              subtitle: Text(
-                message.body,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-            );
-          },
-        ));
+        body: isLoading
+            ? Center(child: CircularProgressIndicator())
+            : ListView.separated(
+                itemCount: messages.length,
+                separatorBuilder: (BuildContext context, int index) =>
+                    Divider(),
+                itemBuilder: (BuildContext context, int index) {
+                  Message message = messages[index];
+                  return ListTile(
+                    isThreeLine: true,
+                    leading: CircleAvatar(
+                      child: Text('O'),
+                    ),
+                    title: Text(message.subject),
+                    subtitle: Text(
+                      message.body,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  );
+                },
+              ));
   }
 }
